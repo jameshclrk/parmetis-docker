@@ -1,4 +1,4 @@
-FROM jameshclrk/mpich
+FROM jameshclrk/mpich:latest
 
 MAINTAINER James Clark <james.clark@stfc.ac.uk>
 
