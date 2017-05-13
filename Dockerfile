@@ -6,6 +6,8 @@ ENV METIS_VERSION 5.1.0
 ENV PARMETIS_VERSION 4.0.3
 
 RUN set -x \
+    && apt-get update \
+    && apt-get install -y cmake \
 	&& curl -fSL "http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/metis-$METIS_VERSION.tar.gz" -o metis.tar.gz \
 	&& mkdir -p /usr/src/metis \
 	&& tar -xf metis.tar.gz -C /usr/src/metis --strip-components=1 \
